@@ -1,9 +1,15 @@
-const formulario =
-    document.querySelector("#formulario");
+const mensajeError = document.querySelector("#mensajeError");
 
-formulario.addEventListener(
-    "submit",
-    (e) => {
+function mostrarError(texto) {
+
+    mensajeError.textContent = texto;
+
+    mensajeError.style.display = "block";
+}
+
+const formulario = document.querySelector("#formulario");
+
+formulario.addEventListener("submit", (e) => {
 
         e.preventDefault();
 
@@ -31,7 +37,7 @@ formulario.addEventListener(
 
         if (nombre.length < 5) {
 
-            alert(
+            mostrarError(
                 "El nombre debe tener al menos 5 caracteres"
             );
 
@@ -43,7 +49,7 @@ formulario.addEventListener(
 
         if (!regex.test(email)) {
 
-            alert(
+            mostrarError(
                 "Email inválido"
             );
 
@@ -55,7 +61,7 @@ formulario.addEventListener(
             edad > 60
         ) {
 
-            alert(
+            mostrarError(
                 "La edad debe estar entre 18 y 60 años"
             );
 
@@ -64,7 +70,7 @@ formulario.addEventListener(
 
         if (pais === "") {
 
-            alert(
+            mostrarError(
                 "Seleccione un país"
             );
 
@@ -73,7 +79,7 @@ formulario.addEventListener(
 
         if (!terminos) {
 
-            alert(
+            mostrarError(
                 "Debe aceptar los términos"
             );
 

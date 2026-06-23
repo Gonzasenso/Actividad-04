@@ -18,23 +18,23 @@
 
             <div class="campo">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" required>
+                <input type="text" id="nombre">
             </div>
 
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email">
             </div>
 
             <div class="campo">
                 <label for="edad">Edad</label>
-                <input type="number" id="edad" required>
+                <input type="number" id="edad">
             </div>
 
             <div class="campo">
                 <label for="pais">País</label>
 
-                <select id="pais" required>
+                <select id="pais">
                     <option value="">
                         Seleccionar país
                     </option>
@@ -51,6 +51,8 @@
                     Acepto los términos y condiciones
                 </label>
             </div>
+
+            <div id="mensajeError" class="mensajeError"></div>
 
             <button type="submit" class="botonEnviar">
                 Enviar
